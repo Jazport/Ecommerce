@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Blushing Rose",
+    "price": 16.00,
+    "description": "Soft blush pink with delicate flower accents — classic & wearable.",
+    "photo": "Images/Blush Rose.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Midnight Marble",
+    "price": 18.50,
+    "description": "Black and grey marble with glossy finish and subtle shimmer.",
+    "photo": "Images/Midnight Marble.webp"
+  },
+  {
+    "id": 3,
+    "name": "Sunset Ombre",
+    "price": 15.00,
+    "description": "Gradient sunset tones from coral to peach — warm & bright.",
+    "photo": "Images/Sunset Ombre.webp"
+  },
+  {
+    "id": 4,
+    "name": "Iridescent Pearl",
+    "price": 17.00,
+    "description": "Pearlescent finish with tiny iridescent flakes for subtle glow.",
+    "photo": "Images/Iridescent pearl.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Sapphire Spark",
+    "price": 19.00,
+    "description": "Deep blue with glitter accent — statement ready.",
+    "photo": "Images/Sapphire Spark.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Classic Nude",
+    "price": 14.00,
+    "description": "Neutral nude set for everyday elegance.",
+    "photo": "Images/Classic nude.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "French tips",
+    "price": 20.00,
+    "description": "Modern French tips.",
+    "photo": "Images/French Tips.webp"
+  },
+  {
+    "id": 8,
+    "name": "Minty Fresh",
+    "price": 15.50,
+    "description": "Mint green with a glossy finish.",
+    "photo": "Images/Minty fresh.webp"
+  },
+  {
+    "id": 9,
+    "name": "Rosé Glitter",
+    "price": 18.00,
+    "description": "blush-pink cat eye.",
+    "photo": "Images/Dusty Rose.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Lavender Dreams",
+    "price": 16.50,
+    "description": "Soft lavender with tiny star details.",
+    "photo": "Images/Lavender dreams.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Tortoise Shell",
+    "price": 17.50,
+    "description": "Classic tortoise pattern.",
+    "photo": "Images/Tortoise shell.png"
+  },
+  {
+    "id": 12,
+    "name": "Stained Glass",
+    "price": 19.50,
+    "description": "Floral stained glass with blue, red and gold accents",
+    "photo": "Images/Stained glass.webp"
+  }
+]

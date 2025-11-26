@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Press 'em</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="light purple lighten-4" role="navigation" aria-label="Main Navigation">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo" id="logo">Press 'em</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-links" class="right hide-on-med-and-down">
+          <li ><a class="nav-text" href="index.html">Home</a></li>
+          <li ><a class="nav-text" href="product.html">Products</a></li>
+          <li ><a class="nav-text" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li class="active"><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="container" id="main" tabindex="-1">
+    <h1>Contact</h1>
+    <p>If you'd like to place a custom order or ask a question, fill out the form below.</p>
+
+    <form id="contact-form" novalidate aria-describedby="form-note">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <input id="name" name="name" type="text" required aria-required="true" />
+          <label for="name">Full name</label>
+          <span class="helper-text" data-error="Please enter your name."></span>
+        </div>
+
+        <div class="input-field col s12 m6">
+          <input id="email" name="email" type="email" required aria-required="true" />
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Please enter a valid email address."></span>
+        </div>
+
+        <div class="input-field col s12">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+
+        <div class="input-field col s12">
+          <textarea id="message" name="message" class="materialize-textarea" rows="6" required aria-required="true"></textarea>
+          <label for="message">Message</label>
+          <span class="helper-text" data-error="Please enter a message."></span>
+        </div>
+
+        <div class="col s12">
+          <button id="submit-btn" type="submit" class="btn">Send Message</button>
+          <div id="form-status" role="status" aria-live="polite" class="form-status" style="margin-top:1rem"></div>
+        </div>
+      </div>
+      <p id="form-note" class="sr-only">All fields marked required must be completed before sending. This form currently uses client-side validation only.</p>
+    </form>
+
+    <p>Prefer email? <a href="mailto:jportillososa06@gmail.com">jportillososa06@gmai.com</a></p>
+  </main>
+
+  <footer class="page-footer grey lighten-4" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <h6 class="black-text"> Press 'em</h6>
+          <p class="grey-text text-darken-1">Handmade press-on nails — neat, durable, glamorous.</p>
+        </div>
+        <div class="col s12 m6">
+          <h6 class="black-text">Follow</h6>
+          <a href="https://instagram.com/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">photo_camera</i> Instagram
+          </a>
+          <br/>
+          <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">thumb_up</i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© <span id="year"></span> Press 'em — All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Initialize mobile sidenav
+    var elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+
+    // Keep your other initializations
+    M.updateTextFields();
+    initContactForm();
+  });
+</script>
+
+  </script>
+</body>
+</html>

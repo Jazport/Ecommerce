@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Press 'em</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Accessibility meta -->
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header>
+    <nav class="light purple lighten-4" role="navigation" aria-label="Main Navigation">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo" id="logo">Press 'em</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-controls="mobile-nav" aria-expanded="false">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-links" class="right hide-on-med-and-down">
+          <li ><a class="nav-text" href="index.html">Home</a></li>
+          <li ><a class="nav-text" href="product.html">Products</a></li>
+          <li ><a class="nav-text" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <ul class="sidenav" id="mobile-nav" role="menu" aria-label="Mobile Navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <header class="heroImage">
+
+         <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-text" role="region" aria-label="Hero">
+          <h3 id="hero-heading">Handmade Press-On Nails</h3>
+          <p class="lead">Professional quality, handcrafted designs, quick to apply, stunning to wear.</p>
+          <a class="pretty-btn" href="product.html" aria-label="Shop now">Shop Now</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+
+
+    <!-- Featured products preview (first 3 loaded from JSON) -->
+    <section aria-labelledby="best-heading" class="featured-section">
+      <h2 id="best-heading">Best Sellers</h2>
+      <div id="featured-grid" class="grid" role="list"></div>
+      <p class="view-all"><a href="product.html">View all products →</a></p>
+    </section>
+  </main>
+
+  <footer class="page-footer grey lighten-4" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <h6 class="black-text"> Press 'em</h6>
+          <p class="grey-text text-darken-1">Handmade press-on nails — neat, durable, glamorous.</p>
+        </div>
+        <div class="col s12 m6">
+          <h6 class="black-text">Follow</h6>
+          <a href="https://instagram.com/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">photo_camera</i> Instagram
+          </a>
+          <br/>
+          <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">thumb_up</i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© <span id="year"></span> Press 'em — All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS and initialization -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+  
+  <script>
+    // small inline init for sidenav and year
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+      document.getElementById('year').textContent = new Date().getFullYear();
+      if (window.initProductsPage){
+        initProductsPage();
+      }
+    });
+  </script>
+</body>
+</html>

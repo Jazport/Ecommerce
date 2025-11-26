@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Press 'em</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="light purple lighten-4" role="navigation" aria-label="Main Navigation">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo" id="logo">Press 'em</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-links" class="right hide-on-med-and-down">
+          <li ><a class="nav-text" href="index.html">Home</a></li>
+          <li ><a class="nav-text" href="product.html">Products</a></li>
+          <li ><a class="nav-text" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="product.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="container" id="main-content" tabindex="-1">
+    <h1>Products</h1>
+
+    <!-- Product grid -->
+    <section aria-labelledby="products-heading">
+      <h2 id="products-heading" class="sr-only">Product List</h2>
+      <div id="product-grid" class="grid" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer grey lighten-4" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <h6 class="black-text"> Press 'em</h6>
+          <p class="grey-text text-darken-1">Handmade press-on nails — neat, durable, glamorous.</p>
+        </div>
+        <div class="col s12 m6">
+          <h6 class="black-text">Follow</h6>
+          <a href="https://instagram.com/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">photo_camera</i> Instagram
+          </a>
+          <br/>
+          <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="material-icons" aria-hidden="true">thumb_up</i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© <span id="year"></span> Press 'em — All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile nav
+    var elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+
+    // Initialize selects
+    var selects = document.querySelectorAll('select');
+    M.FormSelect.init(selects);
+
+    // Initialize products page logic
+    initProductsPage();
+  });
+</script>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // init select (Materialize)
+      var elems = document.querySelectorAll('select');
+      M.FormSelect.init(elems);
+
+      // Initialize product rendering
+      initProductsPage();
+    });
+  </script>
+</body>
+</html>
